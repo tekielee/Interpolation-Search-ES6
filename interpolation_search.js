@@ -2,7 +2,7 @@ function interpolationSearch(array, key) {
 	let low = 0;
 	let high = array.length - 1;
 	while(array[high] != array[low] && key >= array[low] && key <= array[high]) {
-		let mid = parseInt(low + ((key - array[low]) * (high - low) / (array[high] - array[low])));
+		let mid = Math.floor(low + ((key - array[low]) * (high - low) / (array[high] - array[low])));
 		if(array[mid] < key) {
 			low = mid + 1;
 		} else if(key < array[mid]) {
